@@ -216,7 +216,7 @@ function! openbrowser#_keymapping_open(mode) "{{{
             return openbrowser#open(filepath)
         else
             call s:Msg.error("URL or file path is not found under cursor!")
-            return
+            return 1
         endif
     else
         return openbrowser#open(s:get_selected_text())
